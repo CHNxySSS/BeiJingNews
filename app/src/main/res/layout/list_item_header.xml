@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <cn.imust.beijing.view.TopNewsViewPager
+        android:id="@+id/vp_tab_detail"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#7000"
+        android:layout_gravity="bottom"
+        android:padding="5dp"
+        >
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="标题"
+            android:textColor="#fff"
+            android:textSize="16sp"
+
+            />
+        <com.viewpagerindicator.CirclePageIndicator
+            android:id="@+id/indicator"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            app:fillColor="#f00"
+            app:pageColor="#cccccc"
+            app:radius="3dp"
+            app:strokeWidth="0dp"
+            />
+    </RelativeLayout>
+</FrameLayout>
