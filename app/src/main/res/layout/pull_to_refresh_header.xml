@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+        <ImageView
+            android:id="@+id/iv_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/common_listview_headview_red_arrow"/>
+        <ProgressBar
+            android:id="@+id/pb_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminateDrawable="@drawable/shape_custom_progress"/>
+    </FrameLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_gravity="center">
+        <TextView
+            android:id="@+id/tv_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="下拉刷新"
+            android:textColor="#f00"
+            android:textSize="18sp"/>
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="2015-05-25 15:00"
+            android:textColor="#f00"
+            android:textSize="18sp"/>
+    </LinearLayout>
+</LinearLayout>
