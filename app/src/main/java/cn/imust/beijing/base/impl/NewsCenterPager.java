@@ -5,6 +5,7 @@ import android.graphics.Color;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.Gravity;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -95,7 +96,7 @@ public class NewsCenterPager extends BasePager {
         mPagers = new ArrayList<BaseMenuDetailPager>();
         mPagers.add(new NewsMenuDetailPager(mActivity,mNewsMenu.data.get(0).children));
         mPagers.add(new TopicMenuDetailPager(mActivity));
-        mPagers.add(new PhotosMenuDetailPager(mActivity));
+        mPagers.add(new PhotosMenuDetailPager(mActivity,btnDisplay));
         mPagers.add(new InteractMenuDetailPager(mActivity));
         //设置新闻菜单详情页为默认页面
         setMenuDetailPager(0);
@@ -103,6 +104,12 @@ public class NewsCenterPager extends BasePager {
     //修改菜单详情页
     public void setMenuDetailPager(int position) {
         BaseMenuDetailPager pager = mPagers.get(position);
+        //判断是否是组图，如果是，显示切换按钮，否则隐藏
+        if(pager instanceof PhotosMenuDetailPager){
+            btnDisplay.setVisibility(View.VISIBLE);
+        }else {
+            btnDisplay.setVisibility(View.GONE);
+        }
         //清除之前帧布局显示的内容
         flContainer.removeAllViews();
         //修改当前帧布局显示的内容
